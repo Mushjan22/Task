@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.allContent{
+    display: flex;
+    font-family: 'Public Sans', sans-serif;
+}
+.leftContent {
+    height: 100vh;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+}
+.leftContentName{
+    padding: 20px 14px 20px 18px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 260px;
+    height: 64px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+}
+.leftContentName p{
+    color: #4B465C;
+    text-shadow: 0 1px 0 #FFFFFF1A;
+    width:198px ;
+}
+.leftContentName img{
+    width: 20px;
+    height:20px;
+} 
+.leftContentMenus{
+    padding: 0 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    font-weight: 400;
+}
+.leftContentMenus a{
+    position: relative;
+    width: 232px;
+    height: 40px;
+    padding-left: 16px;
+    text-decoration: none;
+    color:#4B465C ;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+.leftContentMenus a img{
+    width: 24px;
+    height: 24px;
+}
+.leftContentMenus a:hover{
+    transition: background-color 0.3s ease;
+    background: linear-gradient(to right, #7367F0 0%, rgba(115, 103, 240, 0.7) 100%);
+    box-shadow: 0px 2px 6px 0px rgba(115, 103, 240, 0.48);
+    color: white;
+}
+.leftContentMenus a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.activeBtn {
+    background: linear-gradient(to right, #7367F0 0%, rgba(115, 103, 240, 0.7) 100%);
+    box-shadow: 0px 2px 6px 0px rgba(115, 103, 240, 0.48);
+}
+.activeBtn p {
+    color: white;
+}
+.activeBtn  img{
+    filter: brightness(0) invert(1);
+}
+.activeBtn .showBtn::after{
+    filter: brightness(0) invert(1);
+
+}
+.showBtn::after{
+    content: ""; 
+    position: absolute;
+    right: 15px; 
+    top: 14px;
+    width: 12px; 
+    height: 12px;
+    background-image: url('images/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.showBtn.activeBtn::after {
+    filter: brightness(0) invert(1);
+
+}
+.leftContentMenus a.showBtn:hover::after {
+    filter: brightness(0) invert(1);
+}

@@ -164,15 +164,14 @@
 }
 .productTable{
     box-shadow: 0px 4px 18px 0px #A5A3AE4D;
-    height: 1021px;
     border-radius: 6px;
     padding: 16px 0;
 }
 .productTable table{
+    table-layout: fixed;
     margin-top: 16px;
     border-collapse: collapse; 
     width: 1128px;
-    height: 803px;
 }
 .productTable table tr{ 
     height: 75px;
@@ -180,12 +179,33 @@
 
 .productTable table td {
     border-bottom: 1px solid #DBDADE;
-    padding-left: 24px;
+    color: rgb(75, 70, 92, 0.8);
+    padding-left: 45px;
 }
+.productTable table tr:last-child td,
 .productTable table tr:nth-child(2) td{
     border: none;
 }
+.productTable table td:first-child{
+    padding-left: 24px;
+    width: 142px;
+    color: rgb(75, 70, 92, 0.5);
+}
+.productTable table td:nth-child(3){
+    padding-left: 75px;
+    color: rgb(75, 70, 92, 0.8);
+}
+.productTable table td:nth-child(4){
+    padding-left:110px;
+    color: #767676;
+}
+.productTable table td:nth-child(5){
+    padding-left:130px;
+    color: rgb(75, 70, 92, 0.8);
+}
 .productTable table tr:first-child td{
+    max-height: 75px;
+
     border-top: 1px solid #DBDADE;
 }
 .productTable table tr:first-child{
@@ -201,14 +221,29 @@
     justify-content: space-between;
     color: #4B465C;
     align-items: center;
+    text-transform: uppercase;
+
 }
 .sortCont img{
     width: 19px;
     height: 19px;
 }
+.productTable tr td:nth-child(2) .sortCont {
+    width: 230px;
+}
+.productTable tr td:nth-child(3) .sortCont {
+    width: 230px;
+}
+.productTable tr td:nth-child(4) .sortCont {
+    width: 230px;
+}
+.productTable tr td:nth-child(5) .sortCont {
+    width: 118px;
+}
 .search{
     display: flex;
     justify-content: end;
+    padding-right: 25px;
 }
 input{
     border-radius: 6px;
@@ -217,7 +252,7 @@ input{
     line-height: 24px;
     letter-spacing: 0;
     vertical-align: middle;
-    color: rgb(75, 70, 92, 0.6);
+    color: rgb(75, 70, 92, 0.5);
 }
 .search input{
     width: 513px;
@@ -241,6 +276,7 @@ input{
     padding: 7px 14px;
 }
 .chooseType{
+    padding: 7px 14px;
     width: 230px;
     height: 38px;
     border-radius: 6px;
@@ -249,7 +285,25 @@ input{
     line-height: 24px;
     letter-spacing: 0;
     vertical-align: middle;
+}
+select{
     color: rgb(75, 70, 92, 0.6);
+    border: none;
+    width: 100%;
+}
+.chooseType:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+select:hover{
+    cursor: pointer;
+    .chooseType{
+        border: 1px solid black;
+    }
+}
+select:focus{
+    outline: none;
+    border: none;
 }
 .restName{
     display: flex;
@@ -259,4 +313,27 @@ input{
 .restName img{
     height: 55px;
     width: 55px;
+}
+.bar{
+    margin-top: 16px;
+    width: 1104px;
+    height: 7px;
+    border-radius: 50px;
+    background-color: rgb(241,241,242);
+    margin-left: 24px;
+}
+.progres{
+    width: 290px;
+    height: 7px;
+    background-color:#7367F0 ;
+    border-radius: 50px;
+}
+.entries{
+    margin-left: 24px;
+    color: rgb(75, 70, 92, 0.5);
+    font-size: 13px;
+    line-height: 20px;
+    vertical-align: middle;
+    font-weight: 400;
+    margin-top: 16px;
 }
